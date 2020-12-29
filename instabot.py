@@ -19,3 +19,9 @@ for i in count(0):
     # choosing a random picture from the specified folder
 	picture = random.choice(os.listdir(path))
 	print("[IonutSauciuc] Successfully chosen photo.")
+
+    # post the photo
+
+    # deleting the picture
+	os.unlink(os.path.join(path, picture + ".REMOVE_ME")) # REMOVE_ME because the instabot modifies the file name after posting to instagram
+	print("[IonutSauciuc] Successfully deleted photo.")
