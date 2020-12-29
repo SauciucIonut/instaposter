@@ -10,6 +10,7 @@ bot = Bot() # initializing the bot
 path = " " # set the path to the folder with all your pictures you want posted
 username = " " # instagram username
 password = " " # instagram password
+caption = " " # instagram picture description
 
 # infinite loop
 for i in count(0):
@@ -21,7 +22,9 @@ for i in count(0):
 	print("[IonutSauciuc] Successfully chosen photo.")
 
     # post the photo
-
+	bot.upload_photo(path + picture, caption = caption) 
+	print("[IonutSauciuc] Successfully uploaded photo.")
+    
     # deleting the picture
 	os.unlink(os.path.join(path, picture + ".REMOVE_ME")) # REMOVE_ME because the instabot modifies the file name after posting to instagram
 	print("[IonutSauciuc] Successfully deleted photo.")
