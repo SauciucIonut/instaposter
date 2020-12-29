@@ -19,16 +19,17 @@ for i in count(0):
 
     # choosing a random picture from the specified folder
 	picture = random.choice(os.listdir(path))
-	print("[IonutSauciuc] Successfully chosen photo.")
+	print("[SauciucIonut] Successfully chosen photo.")
 
     # post the photo
 	bot.upload_photo(path + picture, caption = caption) 
-	print("[IonutSauciuc] Successfully uploaded photo.")
+	print("[SauciucIonut] Successfully uploaded photo.")
 
     # deleting the picture
 	os.unlink(os.path.join(path, picture + ".REMOVE_ME")) # REMOVE_ME because the instabot modifies the file name after posting to instagram
-	print("[IonutSauciuc] Successfully deleted photo.")
+	print("[SauciucIonut] Successfully deleted photo.")
 
     # sleeping for set amount of hours
-	print(f"[IonutSauciuc] Sleeping for {str(hours)} hours.")
+	print(f"[SauciucIonut] Sleeping for {str(hours)} hours.")
 	time.sleep(int(hours)*60*60)
+    
