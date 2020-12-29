@@ -15,3 +15,7 @@ password = " " # instagram password
 for i in count(0):
 	# logging in
 	bot.login(username = username, password = password)
+
+    # choosing a random picture from the specified folder
+	picture = random.choice(os.listdir(path))
+	print("[IonutSauciuc] Successfully chosen photo.")
