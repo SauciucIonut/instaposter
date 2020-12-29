@@ -24,7 +24,11 @@ for i in count(0):
     # post the photo
 	bot.upload_photo(path + picture, caption = caption) 
 	print("[IonutSauciuc] Successfully uploaded photo.")
-    
+
     # deleting the picture
 	os.unlink(os.path.join(path, picture + ".REMOVE_ME")) # REMOVE_ME because the instabot modifies the file name after posting to instagram
 	print("[IonutSauciuc] Successfully deleted photo.")
+
+    # sleeping for set amount of hours
+	print(f"[IonutSauciuc] Sleeping for {str(hours)} hours.")
+	time.sleep(int(hours)*60*60)
